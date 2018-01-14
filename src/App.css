@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Open+Sans|Oswald|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto');
 
 body {
   background: #355c7d;
@@ -11,9 +11,21 @@ body {
 }
 
 .random {
-  background: #f67280;
-  padding: 2vw;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.1vw;
+  color: #f67280;
+  padding: 1vw;
   font-size: 2vw;
+  margin-top: 2vw;
+  
+}
+
+.random, .article-link {
+  text-decoration: none;
+}
+
+.random:link {
+  color: #f67280;
 }
 
 .form {
@@ -22,6 +34,16 @@ body {
 
 .input {
   font-size: 2.1vw;
+  color: #6c5b7b;
+}
+
+.search-button {
+  background: #355c7d;
+  border: none;
+}
+
+.fa-search {
+  color: #f67280;
 }
 
 .result-list {
@@ -39,21 +61,13 @@ body {
 
 .title {
   font-family: 'Oswald', sans-serif;
-  font-size: 3vw;
+  font-size: 2.2vw;
   margin: 0;
 }
 
 .snippet {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   line-height: 2vw;
-}
-
-a:active,
-a:visited,
-a:link
- {
-  text-decoration: none;
-  color: black;
 }
 
 a:hover {

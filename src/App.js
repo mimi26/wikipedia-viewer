@@ -25,20 +25,21 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Special:Random"><button className="random">Click here for random knowledge</button></a>
+        {/* <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Special:Random"><button className="random">Click here for random knowledge</button></a> */}
+        <a className="random" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Special:Random">Click here for random knowledge</a>
         <form className="form" onSubmit={this.onSubmit}>
           <input className="input" ype="text" name="search_text" />
-          <button type="submit">Search</button>
+          <button type="submit" className="search-button"><i className="fa fa-search fa-2x" aria-hidden="true"></i></button>
         </form>
         <div>
           {this.state.results ? this.state.results.map((article, i) => {
             return (
-              <a href={`https://en.wikipedia.org/?curid=${article.pageid}`}
+              <a className="article-link" href={`https://en.wikipedia.org/?curid=${article.pageid}`}
                 target="_blank"
                 rel="noopener noreferrer">
                 <div className="result-list" key={i}>
                   <p className="title">{article.title}</p>
-                  <p className="snippet" dangerouslySetInnerHTML={{ __html: `${article.snippet} ...(Click for more)` }} />
+                  <p className="snippet" dangerouslySetInnerHTML={{ __html: `${article.snippet} <i>. . . (Click for more)</i>` }} />
                 </div>
               </a>
             )
