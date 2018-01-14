@@ -10,6 +10,7 @@ class App extends Component {
     }
     this.onSubmit = this.onSubmit.bind(this);
   }
+  
   onSubmit(event) {
     event.preventDefault();
     let query = event.target.search_text.value;
@@ -25,7 +26,6 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        {/* <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Special:Random"><button className="random">Click here for random knowledge</button></a> */}
         <a className="random" target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Special:Random">Click here for random knowledge</a>
         <form className="form" onSubmit={this.onSubmit}>
           <input className="input" ype="text" name="search_text" />
